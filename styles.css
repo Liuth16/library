@@ -38,7 +38,7 @@
   }
 
   .header {
-    background-color: red;
+    background-color: #0ea5e9;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -62,7 +62,7 @@
   }
 
   .main {
-    background-color: blue;
+    background-color: #64748b;
     display: grid;
     overflow: auto;
     grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
@@ -74,12 +74,13 @@
 
   .book-card {
     height: 300px;
-    background-color: pink;
+    background-color: #d4d4d4;
     display: flex;
     flex-direction: column;
     align-items: center; 
     justify-content: center;
     gap: 3rem;
+    border-radius: 5px;
   }
 
 
@@ -124,7 +125,7 @@
 
   .add {
     padding: 1rem;
-    background-color: red;
+    background-color: #0ea5e9;
     border: none;
   }
 
