@@ -50,6 +50,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    font-size: 3rem;
   }
 
   .add-button {
@@ -91,8 +92,25 @@
   dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
   }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
   
   .close {
     margin-top: 1rem;
   }
+
+  .add img {
+    height: 48px;
+    width: auto;
+  }
   
+
+  .add {
+    padding: 1rem;
+    background-color: red;
+    border: none;
+  }
