@@ -75,6 +75,19 @@
   .book-card {
     height: 300px;
     background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    gap: 3rem;
+  }
+
+
+  .card-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
   }
 
   dialog {
@@ -113,4 +126,9 @@
     padding: 1rem;
     background-color: red;
     border: none;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
   }

@@ -31,11 +31,15 @@ function createElements(){
     const lastBook = myLibrary[myLibrary.length - 1][objKey];
     div.setAttribute("id", objKey);
     div.setAttribute("class", "book-card");
-    div.innerHTML = `<p><strong>Author:</strong> ${lastBook.author}</p>
-        <p><strong>Title:</strong> ${lastBook.title}</p>
-        <p><strong>Pages:</strong> ${lastBook.pages}</p>
-        <button class="remove-button">Remove</button>
-        <label><input type="checkbox" class="read-check">Read</label>`;
+    div.innerHTML = `            <div>
+                <p><strong>Author:</strong> ${lastBook.author}</p>
+                <p><strong>Title:</strong> ${lastBook.title}</p>
+                <p><strong>Pages:</strong> ${lastBook.pages}</p>
+            </div>
+            <div class="card-buttons">
+                <button class="remove-button">Remove</button>
+                <label>Read<input type="checkbox" class="read-check"></label>
+            </div>`;
     mainContainer.appendChild(div);
     
     const removeButton = div.querySelector(".remove-button");
