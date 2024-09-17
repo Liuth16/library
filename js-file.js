@@ -7,12 +7,14 @@ const form = document.querySelector("#book-form");
 
 const myLibrary = [];
 
-function Book(author, title, pages) {
-    this.author = author;
-    this.title = title;
-    this.pages = pages;
-    this.dataIndex = myLibrary.length;
-    this.read = false;
+class Book {
+    constructor (author, title, pages) {
+        this.author = author;
+        this.title = title;
+        this.pages = pages;
+        this.dataIndex = myLibrary.length;
+        this.read = false;
+    }
 };
 
 function addBookToLibrary(author, title, pages) {
