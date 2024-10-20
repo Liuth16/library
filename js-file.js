@@ -92,3 +92,38 @@ form.addEventListener("submit", (e) => {
 
   dialog.close();
 });
+
+function validateFields() {
+  const authorInput = document.getElementById("author");
+  const titleInput = document.getElementById("title");
+  const pagesInput = document.getElementById("pages");
+
+  const author = authorInput.value;
+  const title = titleInput.value;
+  const page = pagesInput.value;
+  const pageNumber = parseInt(page, 10);
+
+  if (author.length < 4) {
+    authorInput.setCustomValidity("Author needs at least 4 characters.");
+  } else {
+    authorInput.setCustomValidity("");
+  }
+
+  if (title.length < 4) {
+    titleInput.setCustomValidity("Title needs at least 4 characters.");
+  } else {
+    titleInput.setCustomValidity("");
+  }
+
+  if (pageNumber < 20 || pageNumber > 1000) {
+    pagesInput.setCustomValidity("Page needs to be between 20 and 1000.");
+  } else {
+    pagesInput.setCustomValidity("");
+  }
+}
+
+window.onload = () => {
+  document.getElementById("author").oninput = validateFields;
+  document.getElementById("title").oninput = validateFields;
+  document.getElementById("pages").oninput = validateFields;
+};
